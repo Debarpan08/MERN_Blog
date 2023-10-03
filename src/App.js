@@ -1,25 +1,55 @@
-import logo from './logo.svg';
 import './App.css';
+import Post from './Post';
+import Header from './Header';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Home from './Home';
+import { useRef } from 'react';
 
 function App() {
+  const myRef = useRef(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Routes>
+      <Route path="/" element ={
+        
+         <Header />
+         /* <Post />
+         <Post />
+         <Post /> */
+       
+      }/>
+    </Routes>
+    
 
-export default App;
+
+    );
+  }
+  
+  export default App;
+
+
+
+
+
+
+
+
+
+
+  //   <BrowserRouter>
+  //   <Routes>
+  //   {/* <Route index element ={
+  //       <main>
+  //        <Header />
+  //        <Post />
+  //        <Post />
+  //        <Post />
+  //        </main>
+  //     }/> */}
+  //     <Route index element={<Home />} />
+  //   </Routes>
+  // </BrowserRouter>
+      
+     
+      
+   
+ 
